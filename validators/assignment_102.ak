@@ -1,3 +1,5 @@
+use cardano/transaction.{OutputReference, Transaction}
+
 // Custom Datum Type - represents the "lock configuration"
 pub type CustomDatum {
   SecretMessage { secret: ByteArray, owner: ByteArray, amount_locked: Int }
@@ -11,4 +13,19 @@ pub type CustomRedeemer {
   PublicAccess { reason: ByteArray }
   AdminOverride { admin_signature: ByteArray }
   EmergencyUnlock
+}
+
+validator custom_spending_validator {
+  spend(
+    datum_opt: Option<CustomDatum>,
+    redeemer: CustomRedeemer,
+    _input: OutputReference,
+    _tx: Transaction,
+  ) {
+    todo @"implement validation logic"
+  }
+
+  else(_) {
+    fail
+  }
 }
