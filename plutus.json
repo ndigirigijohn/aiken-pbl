@@ -1,0 +1,158 @@
+{
+  "preamble": {
+    "title": "ndigirigijohn/aiken-pbl",
+    "description": "Aiken contracts for project 'ndigirigijohn/aiken-pbl'",
+    "version": "0.0.0",
+    "plutusVersion": "v3",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.1.15+unknown"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "assignment_102.custom_spending_validator.spend",
+      "datum": {
+        "title": "datum_opt",
+        "schema": {
+          "$ref": "#/definitions/assignment_102~1CustomDatum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/assignment_102~1CustomRedeemer"
+        }
+      },
+      "compiledCode": "59021601010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cdc3a400530070024888966002600460106ea800e3300130093754007370e90004dc3a4009370e90034c020dd5002244444646644b300130070048991919912cc004c06000e00d16405864b300130140018acc004cdc4a4008602600316898069809800a0248b202a3754602a0026eb8c054008c054004c044dd5006456600260140091323259800980b00140122c80a0dd7180a00098089baa00c8acc004c01801226464b300130160028024590141bae3014001301137540191598009802802456600260226ea803200516404916403c807900f201e159800980418071baa0018a50899192cc004c01c0062653001375c6028003375a6028602a602a0033011375401a9112cc004c02c0062b30013371e6eb8c05cc054dd5008001c4cdc42400000514a0809a2b3001300a001899b890024820225ea2b30013009001899b8900248302683229410132026404c301137540051598009805000c4c9660026016003159800cc004cdc79bae30143012375401a91100a50a5140411337106eb4c050c054c048dd5001a410112f514a080822b300130070018a518a5040408080c040dd500644c966002600c00314a31598009805800c528c5282020404060206ea803100f201e300f37540026022601e6ea800500d180880318081808802a2c8038600e00260066ea801e29344d9590011",
+      "hash": "8a0fcd4edbef7bb00b329d3a7a429b1ab277fb0e01b187989adafdea"
+    },
+    {
+      "title": "assignment_102.custom_spending_validator.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "59021601010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cdc3a400530070024888966002600460106ea800e3300130093754007370e90004dc3a4009370e90034c020dd5002244444646644b300130070048991919912cc004c06000e00d16405864b300130140018acc004cdc4a4008602600316898069809800a0248b202a3754602a0026eb8c054008c054004c044dd5006456600260140091323259800980b00140122c80a0dd7180a00098089baa00c8acc004c01801226464b300130160028024590141bae3014001301137540191598009802802456600260226ea803200516404916403c807900f201e159800980418071baa0018a50899192cc004c01c0062653001375c6028003375a6028602a602a0033011375401a9112cc004c02c0062b30013371e6eb8c05cc054dd5008001c4cdc42400000514a0809a2b3001300a001899b890024820225ea2b30013009001899b8900248302683229410132026404c301137540051598009805000c4c9660026016003159800cc004cdc79bae30143012375401a91100a50a5140411337106eb4c050c054c048dd5001a410112f514a080822b300130070018a518a5040408080c040dd500644c966002600c00314a31598009805800c528c5282020404060206ea803100f201e300f37540026022601e6ea800500d180880318081808802a2c8038600e00260066ea801e29344d9590011",
+      "hash": "8a0fcd4edbef7bb00b329d3a7a429b1ab277fb0e01b187989adafdea"
+    }
+  ],
+  "definitions": {
+    "Bool": {
+      "title": "Bool",
+      "anyOf": [
+        {
+          "title": "False",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "True",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        }
+      ]
+    },
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "assignment_102/CustomDatum": {
+      "title": "CustomDatum",
+      "anyOf": [
+        {
+          "title": "SecretMessage",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "secret",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "owner",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "amount_locked",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        },
+        {
+          "title": "PublicInfo",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": [
+            {
+              "title": "public_message",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "created_at",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        },
+        {
+          "title": "EmptyDatum",
+          "dataType": "constructor",
+          "index": 2,
+          "fields": []
+        }
+      ]
+    },
+    "assignment_102/CustomRedeemer": {
+      "title": "CustomRedeemer",
+      "anyOf": [
+        {
+          "title": "UnlockWithSecret",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "provided_secret",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "signature_required",
+              "$ref": "#/definitions/Bool"
+            }
+          ]
+        },
+        {
+          "title": "PublicAccess",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": [
+            {
+              "title": "reason",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        },
+        {
+          "title": "AdminOverride",
+          "dataType": "constructor",
+          "index": 2,
+          "fields": [
+            {
+              "title": "admin_signature",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        },
+        {
+          "title": "EmergencyUnlock",
+          "dataType": "constructor",
+          "index": 3,
+          "fields": []
+        }
+      ]
+    }
+  }
+}
