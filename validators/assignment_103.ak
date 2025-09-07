@@ -1,6 +1,4 @@
 // validators/assignment_103.ak
-// Assignment: Adventures in Mock Transactions
-// Task: Create a mock transaction where two different NFTs are minted
 
 use aiken/collection/dict
 use cardano/assets.{from_asset, merge, tokens}
