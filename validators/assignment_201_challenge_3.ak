@@ -86,7 +86,7 @@ validator complex_deadline_validator {
     let after_deadline = is_after_deadline(tx.validity_range, datum.deadline)
     let has_multiple_outputs = has_outputs_to_multiple_addresses(tx.outputs, 2)
     let admin_signed = list.has(tx.extra_signatories, datum.administrator)
-    // Add traces for debugging
+    // Traces for debugging
     trace @"Deadline (POSIX ms)": datum.deadline
     trace @"Before deadline": before_deadline
     trace @"After deadline": after_deadline
@@ -94,7 +94,7 @@ validator complex_deadline_validator {
     trace @"Has multiple outputs": has_multiple_outputs
     trace @"Admin signed": admin_signed
     trace @"Administrator": datum.administrator
-    // Complex conditional logic:
+    // Conditional logic:
     // BEFORE deadline: Must send to at least 2 different addresses
     // AFTER deadline: Must be signed by administrator
     or {

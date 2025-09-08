@@ -37,11 +37,11 @@
       "hash": "8a0fcd4edbef7bb00b329d3a7a429b1ab277fb0e01b187989adafdea"
     },
     {
-      "title": "assignment_201.simple_deadline.spend",
+      "title": "assignment_201_challenge_1.simple_deadline.spend",
       "datum": {
         "title": "datum_opt",
         "schema": {
-          "$ref": "#/definitions/assignment_201~1DeadlineDatum"
+          "$ref": "#/definitions/assignment_201_challenge_1~1DeadlineDatum"
         }
       },
       "redeemer": {
@@ -54,12 +54,87 @@
       "hash": "ba49eac5f181c903ac98fedd75953c49eb055f7b17808732f86a1dba"
     },
     {
-      "title": "assignment_201.simple_deadline.else",
+      "title": "assignment_201_challenge_1.simple_deadline.else",
       "redeemer": {
         "schema": {}
       },
       "compiledCode": "59011401010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cdc3a400530070024888966002600460106ea800e2646644b30013370e900018059baa001899192cc004c01cc004dd6180818071baa0068acc004c01cc004dd618081808980898071baa006899192cc004c024006266e20dd6980918081baa002375a602460206ea8c048c040dd5002c56600266e1d20000018a518a5040388070c038dd5000980818071baa3010300e375460206022602260226022602260226022601c6ea801a294100c4528201830010012259800800c52000899b8048008cc008008c04400500f45900a18060009806180680098049baa0038b200e180380098019baa0078a4d13656400401",
       "hash": "ba49eac5f181c903ac98fedd75953c49eb055f7b17808732f86a1dba"
+    },
+    {
+      "title": "assignment_201_challenge_2.signature_validator.spend",
+      "datum": {
+        "title": "_datum_opt",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/assignment_201_challenge_2~1SignatureRedeemer"
+        }
+      },
+      "compiledCode": "58cd01010029800aba2aba1aab9faab9eaab9dab9a48888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea801626464b3001300f002899199119801001000912cc00400629422b30013371e6eb8c04400400e2946266004004602400280690101bac300f30103010301030103010301030103010300d3754601e0146eb8c038c030dd5003c5900d1bae300d001300a375400b164020601400260146016002600e6ea80062c8028c01c004c01cc020004c01c004c00cdd5003c52689b2b200201",
+      "hash": "fb40e1a66585010a270825ca12436e34e3ff2230c5de4299b6268deb"
+    },
+    {
+      "title": "assignment_201_challenge_2.signature_validator.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "58cd01010029800aba2aba1aab9faab9eaab9dab9a48888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea801626464b3001300f002899199119801001000912cc00400629422b30013371e6eb8c04400400e2946266004004602400280690101bac300f30103010301030103010301030103010300d3754601e0146eb8c038c030dd5003c5900d1bae300d001300a375400b164020601400260146016002600e6ea80062c8028c01c004c01cc020004c01c004c00cdd5003c52689b2b200201",
+      "hash": "fb40e1a66585010a270825ca12436e34e3ff2230c5de4299b6268deb"
+    },
+    {
+      "title": "assignment_201_challenge_2secure.secure_signature_validator.spend",
+      "datum": {
+        "title": "datum_opt",
+        "schema": {
+          "$ref": "#/definitions/assignment_201_challenge_2secure~1SecureDatum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/assignment_201_challenge_2secure~1SecureRedeemer"
+        }
+      },
+      "compiledCode": "58f901010029800aba2aba1aab9faab9eaab9dab9a48888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea801626464b3001300f0028acc004cdc3a400460166ea800e29422b3001323322330020020012259800800c528456600266e3cdd71808800801c528c4cc008008c04800500d20203758601e60206020602060206020602060206020601a6ea8c03c028dd7180718061baa300e300c375400713371290001bad300e300c375400f14a0805100a45900d1bad300d001300a375400b164020601400260146016002600e6ea80062c8028c01c004c01cc020004c01c004c00cdd5003c52689b2b200201",
+      "hash": "384268019f2d38d0cbe0507fb9f604f1d1c4cbfaf723e2c3851b3cd2"
+    },
+    {
+      "title": "assignment_201_challenge_2secure.secure_signature_validator.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "58f901010029800aba2aba1aab9faab9eaab9dab9a48888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea801626464b3001300f0028acc004cdc3a400460166ea800e29422b3001323322330020020012259800800c528456600266e3cdd71808800801c528c4cc008008c04800500d20203758601e60206020602060206020602060206020601a6ea8c03c028dd7180718061baa300e300c375400713371290001bad300e300c375400f14a0805100a45900d1bad300d001300a375400b164020601400260146016002600e6ea80062c8028c01c004c01cc020004c01c004c00cdd5003c52689b2b200201",
+      "hash": "384268019f2d38d0cbe0507fb9f604f1d1c4cbfaf723e2c3851b3cd2"
+    },
+    {
+      "title": "assignment_201_challenge_3.complex_deadline_validator.spend",
+      "datum": {
+        "title": "datum_opt",
+        "schema": {
+          "$ref": "#/definitions/assignment_201_challenge_3~1ComplexDeadlineDatum"
+        }
+      },
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/assignment_201_challenge_3~1ComplexRedeemer"
+        }
+      },
+      "compiledCode": "59022e01010029800aba2aba1aba0aab9faab9eaab9dab9a488888896600264653001300800198041804800cdc3a400530080024888966002600460106ea800e2653001300d00198069807000cdc3a40009112cc004c004c030dd500444c8c9660026026005159800980198071baa004899912cc005660026464b3001300c001899b88375a602c60266ea8008dd6980b18099baa0048acc004c01c00629462941011202230113754002602860226ea8c050c044dd5180098089baa00989919b8948010cc004004c8cc004004dd6180b180b980b98099baa00b2259800800c52f5c11332259800991919800800801912cc00400629422b30013375e603800200714a3133002002301d001405c80d0c064c058dd5001440062660306032602c6ea8008005014180b80099801001180c000a02a2259800800c52000899b8048008cc008008c05c0050144528201e8a518acc004c8c96600260180031337126eb4c058c04cdd50021bad3016301337540051598009803800c5284528a022404460226ea8004c050c044dd5180a18089baa3001301137540131323322330020020012259800800c528456600266e3cdd7180b800801c528c4cc008008c060005012202a3758602a602c602c602c602c602c602c602c602c60246ea8028dd7180a180a98089baa0028a50403c8078c048c03cdd500211809980a180a180a180a180a180a180a000c5900d4590101bad3011001300d375401116402c3009375400716401c300800130033754011149a26cac80081",
+      "hash": "a55c96063af4962561d6b7a5c4970a7da744cbcce5e055f318fcb692"
+    },
+    {
+      "title": "assignment_201_challenge_3.complex_deadline_validator.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "59022e01010029800aba2aba1aba0aab9faab9eaab9dab9a488888896600264653001300800198041804800cdc3a400530080024888966002600460106ea800e2653001300d00198069807000cdc3a40009112cc004c004c030dd500444c8c9660026026005159800980198071baa004899912cc005660026464b3001300c001899b88375a602c60266ea8008dd6980b18099baa0048acc004c01c00629462941011202230113754002602860226ea8c050c044dd5180098089baa00989919b8948010cc004004c8cc004004dd6180b180b980b98099baa00b2259800800c52f5c11332259800991919800800801912cc00400629422b30013375e603800200714a3133002002301d001405c80d0c064c058dd5001440062660306032602c6ea8008005014180b80099801001180c000a02a2259800800c52000899b8048008cc008008c05c0050144528201e8a518acc004c8c96600260180031337126eb4c058c04cdd50021bad3016301337540051598009803800c5284528a022404460226ea8004c050c044dd5180a18089baa3001301137540131323322330020020012259800800c528456600266e3cdd7180b800801c528c4cc008008c060005012202a3758602a602c602c602c602c602c602c602c602c60246ea8028dd7180a180a98089baa0028a50403c8078c048c03cdd500211809980a180a180a180a180a180a180a000c5900d4590101bad3011001300d375401116402c3009375400716401c300800130033754011149a26cac80081",
+      "hash": "a55c96063af4962561d6b7a5c4970a7da744cbcce5e055f318fcb692"
     }
   ],
   "definitions": {
@@ -89,6 +164,10 @@
     },
     "Int": {
       "dataType": "integer"
+    },
+    "aiken/crypto/VerificationKeyHash": {
+      "title": "VerificationKeyHash",
+      "dataType": "bytes"
     },
     "assignment_102/CustomDatum": {
       "title": "CustomDatum",
@@ -183,7 +262,7 @@
         }
       ]
     },
-    "assignment_201/DeadlineDatum": {
+    "assignment_201_challenge_1/DeadlineDatum": {
       "title": "DeadlineDatum",
       "anyOf": [
         {
@@ -193,6 +272,90 @@
           "fields": [
             {
               "title": "deadline",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    },
+    "assignment_201_challenge_2/SignatureRedeemer": {
+      "title": "SignatureRedeemer",
+      "anyOf": [
+        {
+          "title": "SignatureRedeemer",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "required_signer",
+              "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+            }
+          ]
+        }
+      ]
+    },
+    "assignment_201_challenge_2secure/SecureDatum": {
+      "title": "SecureDatum",
+      "anyOf": [
+        {
+          "title": "SecureDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "authorized_signer",
+              "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+            }
+          ]
+        }
+      ]
+    },
+    "assignment_201_challenge_2secure/SecureRedeemer": {
+      "title": "SecureRedeemer",
+      "anyOf": [
+        {
+          "title": "SecureRedeemer",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "action",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    },
+    "assignment_201_challenge_3/ComplexDeadlineDatum": {
+      "title": "ComplexDeadlineDatum",
+      "anyOf": [
+        {
+          "title": "ComplexDeadlineDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "deadline",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "administrator",
+              "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+            }
+          ]
+        }
+      ]
+    },
+    "assignment_201_challenge_3/ComplexRedeemer": {
+      "title": "ComplexRedeemer",
+      "anyOf": [
+        {
+          "title": "ComplexRedeemer",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "action",
               "$ref": "#/definitions/Int"
             }
           ]
