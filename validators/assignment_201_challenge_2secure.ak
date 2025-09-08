@@ -28,16 +28,25 @@ validator secure_signature_validator {
     _input: OutputReference,
     tx: Transaction,
   ) {
-    expect Some(datum) = datum_opt
-    // Only the authorized signer (from datum) can unlock funds
-    let is_authorized = list.has(tx.extra_signatories, datum.authorized_signer)
-    // Could add different logic based on redeemer action
-    let valid_action = redeemer.action >= 0
-    trace @"Authorized signer": datum.authorized_signer
-    trace @"Transaction signatories": tx.extra_signatories
-    trace @"Is authorized": is_authorized
-    trace @"Valid action": valid_action
-    is_authorized? && valid_action?
+    // Handle the case where no datum is provided
+    when datum_opt is {
+      None -> {
+        trace @"No datum provided"
+        False
+      }
+      Some(datum) -> {
+        // Only the authorized signer (from datum) can unlock funds
+        let is_authorized =
+          list.has(tx.extra_signatories, datum.authorized_signer)
+        // Could add different logic based on redeemer action
+        let valid_action = redeemer.action >= 0
+        trace @"Authorized signer": datum.authorized_signer
+        trace @"Transaction signatories": tx.extra_signatories
+        trace @"Is authorized": is_authorized
+        trace @"Valid action": valid_action
+        is_authorized? && valid_action?
+      }
+    }
   }
 
   else(_) {
